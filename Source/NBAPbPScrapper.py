@@ -8,9 +8,7 @@ def extractGameURLs(year):
     URLs_list = list()
     domain_URL = "https://www.basketball-reference.com/leagues/NBA_"
     year_URL = domain_URL + str(year) + "_games-"
-    months = ['october', 'november', 'december', 'january', 'february', 'march', 'april', 'may', 'june' ,'july']#'august', 'september']
-    #months = ['october-2019', 'november', 'december', 'january', 'february', 'march', 'july', 'august', 'september', 'october-2020']
-    #months = ['february', 'march', 'april', 'may', 'june']
+    months = ['october', 'november', 'december', 'january', 'february', 'march', 'april', 'may', 'june' ,'july']
     for month in months:
         URL = year_URL + month + ".html"
         page = requests.get(URL)
