@@ -140,7 +140,6 @@ def playByPlay(soup,itemList):
         finalList = itemList + [quarter, timeLeft, gamePlay, awayPlay, awayScore, homePlay, homeScore]
         writeCsv(fileName, finalList)
 
-#year = int(input("Which NBA season would you like to extract: "))
 for year in range(2021,2023):
     fileName = 'nbaSeason' + str(year-1) + '_' + str(year) + '.csv'
     gameList = extractGameURLs(year)
@@ -150,17 +149,3 @@ for year in range(2021,2023):
         print('Now printing game:',game)
     print('All games saved in the file were printed successfully!')
 
-
-# 1996 - 1997 play-by-play is introduced
-# Replace def locationGameTime(soup)
-# 2000 - 2001 introduces Location & GameTime. Prior to that only information displayed is Date
-# ---- SEASONS MISSING -----
-# 2010 - 2011 DONE!
-# 2011 - 2012 DONE!
-# 2019 - 2020 (COVID)
-# 2020 - 2021 (post-COVID)
-# 2021 - 2022
-# 1996 - 1997
-# 1997 - 1998
-# 1998 - 1999
-# 1999 - 2000
